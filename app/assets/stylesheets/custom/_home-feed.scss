@@ -1,0 +1,117 @@
+section#home-feed {
+  padding-top: 2rem;
+
+  @include media($large-screen){
+    padding-top: 5rem;
+  }
+
+  #container {
+    margin: 0 auto;
+
+    .item {
+      //@include card-shadow;
+      @include transition (all 0.2s ease-in-out);
+      padding: 2rem;
+      color: #FFF;
+      width: 300px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+
+      a {
+        color: #FFFFFF;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.4rem;
+
+      }
+    }
+
+    $card-background-color: #f8f8f8;
+
+    .item.image {
+      padding: 0;
+      font-size: 0;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .item.twitter {
+      @include social-media-card($twitter-blue);
+    }
+
+    .item.fb {
+      @include social-media-card($facebook-blue);
+    }
+
+    .item.pinterest {
+      @include social-media-card($card-background-color);
+        p, i {
+          color: $pinterest-red;
+        }
+    }
+
+    .item.quote {
+      @include icon-card($card-background-color, $downy);
+    }
+
+    .item.laugh {
+      @include icon-card($card-background-color, $lightning-yellow);
+
+      main {
+        p {
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    .item.blog {
+      @include icon-card($card-background-color, $shakespeare);
+
+      main {
+        p {
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    .item.blog.b2 {
+      @include icon-card($card-background-color, $green-haze);
+    }
+
+    .item.coming-up {
+      @include icon-card($card-background-color, $ming);
+      padding-bottom: 0rem;
+
+      main {
+        padding-bottom: 2rem;
+      }
+    }
+
+    .item.coming-up.cu2 {
+      @include icon-card($card-background-color, $gun-metal);
+      padding-bottom: 0rem;
+
+      main {
+        padding-bottom: 2rem;
+      }
+    }
+
+    .item.this-matters {
+      @include icon-card($card-background-color, $zest);
+    }
+
+    .item.hyst {
+      @include icon-card($card-background-color, $plum);
+    }
+
+    .item.local {
+      @include icon-card($card-background-color, $ny-pink);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<header class="navigation">
+  <div class="menu-wrapper">
+    <a href="/" class="logo">
+      <img src="https://s.gravatar.com/avatar/867a9c1350bec93df3fa1bea74a70072?s=60">
+    </a>
+    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li class="nav-link"><a href="/about">About Me</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">My Work</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Hire Me</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">Sharables</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">This Matters!</a></li>
+            <li><a href="javascript:void(0)">Love Local</a></li>
+            <li><a href="javascript:void(0)">Have You Seen This?</a></li>
+            <li><a href="javascript:void(0)">Quote of the Day</a></li>
+            <li><a href="javascript:void(0)">Have A Laugh</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <div class="search-and-submit">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <span>
+              <i class="fa fa-search"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+      $(".nav .nav-link").each(function() {
+        $(this).removeClass("active-nav-item");
+      });
+      $(this).addClass("active-nav-item"); 
+      $(".nav .more").removeClass("active-nav-item");
+    });
+  });
+</script>

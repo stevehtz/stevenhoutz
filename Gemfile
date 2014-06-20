@@ -13,6 +13,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'font-awesome-sass'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

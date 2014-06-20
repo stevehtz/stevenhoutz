@@ -1,0 +1,175 @@
+$everon-green: #3EB790;
+
+$twitter-blue: #00B0ED;
+$facebook-blue: #3B5998;
+$pinterest-red: #CB2027;
+
+// Soft Green
+$turquoise: #1abc9c;
+$green-sea: #16a085;
+
+$mountain-meadow: #16A085;
+$green-haze: #019875;
+$downy: darken(#65C6BB, 15);
+
+// Loud Green
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+
+$salem: #1E824C;
+$eucalyptus: #26A65B;
+$shamrock: #2ECC71;
+
+// Light Blue
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+
+$shakespeare: darken(#52B3D9, 10);
+
+//Dark Blue
+
+
+
+$ming: #336E7B;
+
+// Purple
+$amethyst: #9b59b6;
+$wisteria1: #8e44ad;
+
+$wisteria2: #913D88;
+$studio: #8E44AD;
+$plum: lighten(#913D88, 2);
+
+// Yellow - Orange
+$sunflower: #f1c40f;
+
+$saffron: #F9BF3B;
+$lightning-yellow: #F5AB35;
+
+// Orange
+$carrot: #e67e22;
+$pumpkin: #d35400;
+
+$jaffa: #F27935;
+$burnt-orange: #D35400;
+$crusta: #F2784B;
+$zest: lighten(#E67E22, 5);
+
+// Red
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+
+$valencia: #D64541;
+$tall-poppy: lighten(#C0392B, 3);
+$ny-pink: darken(#E08283, 17);
+
+//Gray
+
+
+$gun-metal: #555;
+
+//$orange-light: #F4B350;
+
+$grid-blue: #3581A5;
+$grid-teal: #5FBEBE;
+$grid-green: #98C79A;
+$grid-brown: #A7A891;
+$grid-light-green: #BDCC97;
+$grid-gray: #979EA0;
+$grid-purple: #6B83A6;
+
+@mixin card-shadow {
+  border-right: solid #ededed 4px;
+  border-bottom: solid #ededed 4px;
+}
+
+@mixin social-media-card ($smc-background-color) {
+  background: $smc-background-color;
+  height: 225px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  line-height: 1.75rem;
+
+  i {
+    margin-bottom: 0.75rem;
+  }
+  
+  &:hover {
+    background-color: lighten($smc-background-color, 5);
+  }
+}
+
+@mixin icon-card($card-background-color, $card-accent-color) {
+  background: #FFFFFF;
+  color: $card-accent-color;
+  padding: 0;
+
+  @include media($large-screen) {
+    background: $card-background-color;
+  }
+
+  header {
+    background: $card-accent-color;
+    //border-top: solid $card-accent-color 0.5rem;
+    padding: 2rem 0 1.5rem;
+    //border-right: solid darken($card-accent-color, 10) 4px;
+
+    span {
+      color: $card-background-color;
+    }
+
+    h1 {
+      color: $card-background-color;
+      // background-color: $card-accent-color;
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem 0;
+      margin: 0;
+    }
+  }
+
+  main { 
+    //@include card-shadow;
+    padding: 2rem 2rem;
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: solid 2px $card-accent-color;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    p:last-child {
+      font-size: 1.25rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    img {
+      padding-bottom: 1rem;
+    }
+
+    button {
+      background-color: $card-accent-color;
+      font-size: 1.15rem;
+
+      &:hover {
+        background: darken($card-accent-color, 10)
+      }
+    }
+  }
+
+  &:hover {
+    background-color: lighten($card-background-color, 5);
+  }
+
+}

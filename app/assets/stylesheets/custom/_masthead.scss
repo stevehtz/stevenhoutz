@@ -1,0 +1,52 @@
+$life-color: #1BBC9B;
+$work-color: #EB974E;
+$local-color: #EB974E;
+$matters-color: #EB974E;
+$about-color: $base-accent-color;
+
+@mixin masthead-theme($masthead-color) {
+    h1 {
+      color: $masthead-color;
+    }
+    .intro {
+      background: $masthead-color;
+    }
+}
+
+header.masthead {
+  margin-top: 6rem;
+
+  @include media($large-screen) {
+    margin-top: 8rem;
+  }
+
+  h1 {
+    margin: 0 0 -0.05rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3rem;
+    line-height: 0.75;
+
+    @include media($large-screen) {
+      margin: 0 0 -0.1rem 4rem;
+      font-size: 6rem;
+    }
+  }
+
+  .intro {
+    //min-height: 200px;
+    padding: 2rem;
+
+    @include media($large-screen) {
+      //min-height: 400px;
+      padding: 3rem;
+    }
+  }
+}
+
+header.masthead.about {
+  @include masthead-theme($about-color)
+}
+
+header.masthead.life {
+  @include masthead-theme($life-color)
+}
