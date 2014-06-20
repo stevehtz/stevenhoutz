@@ -1,0 +1,58 @@
+section#life-main {
+
+  main {
+
+    @include media($large-screen) {
+      @include span-columns(6);
+    }    
+  
+    article:first-of-type {
+      @include media($large-screen) {
+        @include span-columns(12);
+      }
+    }
+
+    article {
+      color: #555;
+      
+      @include media($large-screen) {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  aside {
+
+    article {
+      width: 300px;
+      padding: 2rem;
+      color: white;
+      color: #FBFCFC;
+      text-align: center;
+      margin: 1rem 0;
+
+      h1 {
+        font-size: 1.75rem;
+        line-height: 3.25rem;
+      }
+    }
+
+    article:nth-of-type(1){
+      background-color: #66CC99;
+    }
+    
+    article:nth-of-type(2){
+      background-color: #36D7B7;
+    }
+   
+    article:nth-of-type(3){
+      background-color: #65C6BB;
+    }
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include shift(1);
+
+    }
+  }
+}
